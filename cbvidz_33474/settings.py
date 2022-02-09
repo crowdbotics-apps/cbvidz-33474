@@ -188,11 +188,6 @@ ACCOUNT_UNIQUE_EMAIL = True
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
-
-YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
-
-MAILTRAP_API_TOKEN=os.getenv('MAILTRAP_API_TOKEN')
-
 ADMIN_URL=os.getenv('ADMIN_URL')
 
 EMAIL_HOST = env.str("EMAIL_HOST", "smtp.sendgrid.net")

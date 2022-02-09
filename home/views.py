@@ -1,3 +1,4 @@
+import os
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
@@ -9,10 +10,10 @@ from django.http import Http404, JsonResponse
 from django.forms.utils import ErrorList
 import urllib
 import requests
-from django.conf import settings
 
 
-YOUTUBE_API_KEY = settings.YOUTUBE_API_KEY
+
+YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
 
 
 def home(request):
