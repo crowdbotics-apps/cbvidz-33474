@@ -1,0 +1,15 @@
+cryptography
+django
+django-widget-tweaks
+django-environ
+django-allauth
+django-storages
+psycopg2
+waitress
+whitenoise
+django-extensions
+packaging
+pyyaml
+pillow
+pytest
+factory-boy

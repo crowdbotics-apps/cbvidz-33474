@@ -11,7 +11,7 @@ This is a repository for a web application developed with Django, built with [Cr
    - [Local Setup](#local-setup-alternative-to-docker)
 4. [Usage](#usage)
    - [Admin Panel](#admin-panel)
-   - [API Documentation](#api-documentation)
+   - [API Documentation](#api-documentation)a
 
 ## Project Structure
 
@@ -114,3 +114,6 @@ Admin Panel can be accessed through http://localhost:8000/admin/. If you are the
 ## API Documentation
 
 API Documentation is generated automatically and can be access through http://localhost:8000/api-docs/. Please make sure you are signed in to the admin panel before navigating to this page.
+
+
+update Pipfile using     pipenv lock --requirements
