@@ -1,11 +1,11 @@
 from django.contrib import admin
-import os
 from django.urls import path, include
+from django.conf import settings
 
-admin_url = os.getenv('ADMIN_URL')
+
 urlpatterns = [
     path("", include("home.urls")),
-    path(str(admin_url) + '/admin/', admin.site.urls),
+    path(settings.ADMIN_URL + '/admin/', admin.site.urls),
 ]
 
 admin.site.site_header = "cbvidz"

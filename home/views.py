@@ -1,4 +1,4 @@
-import os
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
@@ -13,7 +13,7 @@ import requests
 
 
 
-YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
+youtube = settings.YOUTUBE_API_KEY
 
 
 def home(request):
@@ -48,7 +48,7 @@ def add_video(request, pk):
 
             if video_id:
                 video.youtube_id = video_id[0]
-                response = requests.get(f'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id={video_id[0]}&key={YOUTUBE_API_KEY}')
+                response = requests.get(f'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id={video_id[0]}&key={youtube}')
                 json = response.json()
                 title = json['items'][0]['snippet']['title']
                 video.title = title
@@ -65,7 +65,7 @@ def video_search(request):
     search_form = SearchForm(request.GET)
     if search_form.is_valid():
         encoded_search_term = urllib.parse.quote(search_form.cleaned_data['search_term'])
-        response = requests.get(f'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q={encoded_search_term}&key={YOUTUBE_API_KEY}')
+        response = requests.get(f'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q={encoded_search_term}&key={youtube}')
         return JsonResponse(response.json())
 
     return JsonResponse({'error':'Not able to validate!'})
