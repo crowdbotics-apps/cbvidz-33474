@@ -8,6 +8,6 @@ urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
 ]
 
-admin.site.site_header = "cbvidz"
-admin.site.site_title = "cbvidz Admin Portal"
-admin.site.index_title = "cbvidz Admin"
+admin.site.site_header = "vidzbotics"
+admin.site.site_title = "vidzbotics Admin Portal"
+admin.site.index_title = "vidzbotics Admin"
