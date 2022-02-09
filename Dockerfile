@@ -32,4 +32,4 @@ RUN python3 manage.py collectstatic --no-input
 # Run the image as a non-root user
 RUN adduser --disabled-password --gecos "" django
 USER django
-CMD waitress-serve --port=$PORT test_33274.wsgi:application
+CMD waitress-serve --port=$PORT cbvidz_33474.wsgi:application
