@@ -2,10 +2,10 @@ from django.contrib import admin
 import os
 from django.urls import path, include
 
-
+admin_url = os.getenv('ADMIN_URL')
 urlpatterns = [
     path("", include("home.urls")),
-    path(os.getenv('ADMIN_URL')+"/admin/", admin.site.urls),
+    path(admin_url + '/admin/', admin.site.urls),
 ]
 
 admin.site.site_header = "cbvidz"
