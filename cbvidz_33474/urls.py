@@ -5,7 +5,7 @@ from django.conf import settings
 
 urlpatterns = [
     path("", include("home.urls")),
-    path(settings.ADMIN_URL + '/admin/', admin.site.urls),
+    path(settings.ADMIN_URL, admin.site.urls),
 ]
 
 admin.site.site_header = "cbvidz"
