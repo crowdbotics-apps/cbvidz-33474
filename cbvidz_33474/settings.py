@@ -193,6 +193,8 @@ YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
 
 MAILTRAP_API_TOKEN=os.getenv('MAILTRAP_API_TOKEN')
 
+ADMIN_URL=os.getenv('ADMIN_URL')
+
 EMAIL_HOST = env.str("EMAIL_HOST", "smtp.sendgrid.net")
 EMAIL_HOST_USER = env.str("SENDGRID_USERNAME", "")
 EMAIL_HOST_PASSWORD = env.str("SENDGRID_PASSWORD", "")
