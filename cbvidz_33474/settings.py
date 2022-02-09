@@ -198,12 +198,6 @@ LOGOUT_REDIRECT_URL = 'home'
 ADMIN_URL=env.str("ADMIN_URL", "")
 YOUTUBE_API_KEY=env.str("YOUTUBE_API_KEY", "")
 
-EMAIL_HOST = 'smtp.mailgun.org'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'postmaster@mg.bottlenose.co'
-EMAIL_HOST_PASSWORD = 'mys3cr3tp4ssw0rd'
-EMAIL_USE_TLS = True
-
 EMAIL_HOST = env.str("EMAIL_HOST", "MAILGUN_SMTP_SERVER")
 EMAIL_HOST_USER = env.str("MAILGUN_SMTP_LOGIN", "")
 EMAIL_HOST_PASSWORD = env.str("MAILGUN_SMTP_PASSWORD", "")
