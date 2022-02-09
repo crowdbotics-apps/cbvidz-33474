@@ -1,5 +1,5 @@
 """
-WSGI config for test_33274 project.
+WSGI config for cbvidz_33474 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
