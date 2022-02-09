@@ -197,13 +197,18 @@ LOGOUT_REDIRECT_URL = 'home'
 
 ADMIN_URL=env.str("ADMIN_URL", "")
 YOUTUBE_API_KEY=env.str("YOUTUBE_API_KEY", "")
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = env.str("EMAIL_HOST", "smtp.sendgrid.net")
-EMAIL_HOST_USER = env.str("SENDGRID_USERNAME", "")
-EMAIL_HOST_PASSWORD = env.str("SENDGRID_PASSWORD", "")
+
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'postmaster@mg.bottlenose.co'
+EMAIL_HOST_PASSWORD = 'mys3cr3tp4ssw0rd'
+EMAIL_USE_TLS = True
+
+EMAIL_HOST = env.str("EMAIL_HOST", "MAILGUN_SMTP_SERVER")
+EMAIL_HOST_USER = env.str("MAILGUN_SMTP_LOGIN", "")
+EMAIL_HOST_PASSWORD = env.str("MAILGUN_SMTP_PASSWORD", "")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL=EMAIL_HOST_USER
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
